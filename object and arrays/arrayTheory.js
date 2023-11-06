@@ -23,5 +23,54 @@ const greatWoman = 'Megan'
 // console.log(newNames)
 // console.log(names)
 
-const capitalNames = names.map((name) => name.toUpperCase()) //'JOHN', 'TRACY', 'MEGAN', 'TEDD'] this method changes elements in array and ALLWAYS RETURNS NEW ARRAY
-console.log(capitalNames)
+// const capitalNames = names.map((name) => name.toUpperCase()) //'JOHN', 'TRACY', 'MEGAN', 'TEDD'] this method changes elements in array and ALLWAYS RETURNS NEW ARRAY
+// console.log(capitalNames)
+
+// console.log(names.includes('John')) // output is boolean ,true or false //method to check ,is there an element in array that need to be found
+
+
+const people = [{
+    name: 'John',
+    budget: 4200,
+},
+    {
+        name: 'Tracy',
+        budget: 15200,
+    },
+    {
+        name: 'Megan',
+        budget: 300,
+    },
+    {
+        name: 'Tedd',
+        budget: 7520,
+    }
+]
+
+// let foundPerson
+// for (let person of people) {
+//     if (person.budget === 7520) {
+//         foundPerson = person
+//     }
+// }
+// console.log(foundPerson)
+
+// const foundPerson = people.find(function (person) {              //this method helps to find needed element of array that includes objects with their keys and values
+
+//     if (person.budget === 7520) {            or //return person.budget===7520
+//         return true
+//     }
+// })
+// console.log(foundPerson)
+
+// const filtered = people.filter(p => p.budget > 5000)  //this method allows to filter our array //in this example we have filter on budget that higher then 5000//allways returns new array and doesnt change the original
+// console.log(filtered)
+
+// const sumBudget = people.filter(p => p.budget > 5000)
+//     .map(p => p.budget).reduce((acc, p) => acc + p, 0)
+// console.log(sumBudget)
+
+// const string = 'hello,how are you?'      
+// const reversed = string.split(" ") // this method allows to turn a string into an array
+// console.log(reversed, string) // output is ['hello,how', 'are', 'you?'] 'hello,how are you?'
+
