@@ -97,3 +97,52 @@ const x = setInterval(() => {
 // }
 //
 // console.log(sumAll(1, 2, 3, 4, 5))
+
+
+const person = {
+    name: 'Mykyta',
+    age: function () {
+        return Math.floor((new Date() - new Date('May 25,1994 11:30:00')).toString() / 1000 / 60 / 60 / 24 / 365)
+    },
+    languages: ['ru', 'en', 'ua', 'pl'],
+    isProgrammer: false,
+}
+let personKeys = []
+const logger = {
+    keys() {
+        // console.log(Object.keys(this))
+        personKeys = Object.keys(this)
+    },
+
+    keysAndValues() {
+        Object.keys(this).forEach(key => {
+            console.log('Key:', key)
+            console.log('Value', this[key])
+        })
+    }
+}
+logger.keys.call(person)
+console.log(personKeys)
+
+// personKeys.forEach((e) => {
+//     if (e === 'name') {
+//         console.log(personKeys.indexOf('name'))
+//     }
+// })
+// console.log(personKeys)
+//     const changeKey = function (arr) {
+//     const test = []
+//     for (let element of arr) {
+//         if (element === 'name') {
+//             test.push('firstName')
+//         } else test.push(element)
+//
+//
+//     }
+//     return test
+// }
+// const newArr = changeKey(personKeys)
+// console.log(newArr)
+
+const updatedKeys = personKeys.map((e) => e === 'name' ? 'firstName' : e)
+console.log(updatedKeys)
